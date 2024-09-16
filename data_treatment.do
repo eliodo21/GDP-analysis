@@ -26,10 +26,6 @@ ac SD_GDP, lags(20)
 ac GDP, lags(20)
 ac SD_GDP, lags(20)
 ///generate GDP growth rate
-gen rGDPgr= ((GDP-L1.GDP)-1)*100
-label var rGDPgr "real VN GDP growth rate"
-br
-drop rGDPgr
 gen rGDPgr= ((GDP/L1.GDP)-1)*100
 label var rGDPgr "real VN GDP growth rate"
 ac rGDPgr, lags(20)
